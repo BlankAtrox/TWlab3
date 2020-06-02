@@ -1,0 +1,209 @@
+.needs-validation
+{
+    height: 1000px;
+    padding-top: 150px;
+}
+
+body
+{
+    margin: 0;
+    
+    font-family:cursive;
+    font-size: 14px;
+    color: #6c7279;
+    
+    background-color: black;
+}
+
+#cls
+{
+    color: gray;
+}
+#Zoro
+{
+    color: black;
+    text-decoration: none;
+}
+#Zoro:hover
+{
+    color: midnightblue;
+}
+/*Header */
+.header
+{
+    background-color: white;
+    padding: 35px;
+    width: 100%;
+    z-index: 1000;
+    position: absolute;
+}
+.header-1
+{
+    background-image: url(Water-wallpaper-12.jpg);
+    background-attachment: fixed;
+    background-repeat: round;
+    background-color: dimgray;
+    height: 1000px;
+}
+
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-bottom: 1px solid #515369;
+}
+
+.header_logo
+{
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+
+/*nav*/
+
+.nav{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav_link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.1s linear;
+    position: relative;
+}
+
+.nav_link:after{
+    content: "";
+    display: block;
+    width: 100%;
+    
+    background-color: #fce38a;
+    opacity: 0;
+}
+
+.nav_link:hover{
+    color: red;
+}
+
+.nav_link:hover:after{
+    opacity: 1;
+}
+
+/*card*/
+
+.lion
+{
+    padding-top: 100px;
+}
+.tigre
+{
+    padding-top: 50px;
+}
+
+.container
+{
+    background-color: white;
+}
+
+.container1
+{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/*Future*/
+.futures
+{
+    display: flex;
+   /* width: 33%;*/
+}
+
+/*Footer*/
+
+.footer
+{
+    padding:  70px 0;
+    background-color: #3a3e64;
+    
+}
+
+.footer_inner
+{
+    background-color: #3a3e64;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_block
+{
+    width:50%;
+    
+    text-align: center;
+}
+
+.footer_title
+{
+    margin-bottom: 10px;
+    
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    
+}
+
+.footer_adress
+{
+    font-size: 14px;
+    line-height: 1.5;
+    font-style: normal;
+    color: rgba(255,255,255,.5);
+}
+
+.footer_text
+{
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255,255,255,.5);
+    
+}
+
+.jora
+{
+    background-color:#3a3e64;
+}
+
+.link
+{
+    height: 1000px;
+    padding-top: 150px;
+}
+
+.zip
+{
+    text-align: center;
+    text-align-last: center;
+}
+
+.rrr
+{
+    height: 1400px;
+}
+/*Button*/
+.zzz
+{
+    padding-top: 10px;
+}
+
+.zzzz
+{
+    text-align: center;
+    text-align-last: center;
+}

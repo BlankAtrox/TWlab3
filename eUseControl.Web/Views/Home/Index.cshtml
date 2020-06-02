@@ -1,0 +1,37 @@
+﻿@model eUseControl.Web.Models.UserNews
+@using WebMatrix.Data;
+@{
+     Layout = "~/Views/Shared/_Layout.cshtml";
+     ViewBag.Title = "Home";
+     var db = Database.Open("eUseControl");
+     var selectQueryString = "SELECT * FROM News ORDER BY Data";
+}
+
+     <div class="row">
+          <div style="text-align:center">
+               <img src="~/Content/img/imgonline-com-ua-Resize-oMa7aDgGpJq2a.jpg">
+          </div>
+     </div>
+
+
+<div class="content">
+     <div class="row">
+          <div style="text-align:center">
+                    <div class="panel-body">
+                                        <h3>ОБНОВЛЕНИЯ АНИМЕ</h3>
+                              <table cellpadding="1" cellspacing="1" class="table table-bordered table-striped">
+                                   <tbody>
+                                        @foreach (var row in db.Query(selectQueryString))
+                                        {
+                                        <tr>
+                                             <td>@row.data</td>
+                                             <td align="left"><img src="@Url.Content(@row.foto)" width="33" height="27" />   @row.noutati</td>
+                                        </tr>
+                                        }
+                                   </tbody>
+                              </table>
+                    </div>
+          </div>
+     </div>
+</div>
+

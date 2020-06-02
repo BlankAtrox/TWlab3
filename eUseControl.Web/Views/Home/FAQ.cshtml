@@ -1,0 +1,194 @@
+﻿
+@{
+     Layout = "~/Views/Shared/_Layout.cshtml";
+     ViewBag.Title = "Home";
+}
+
+<div class="normalheader ">
+     <div class="hpanel">
+          <div class="panel-body">
+               <a class="small-header-action" href="">
+                    <div class="clip-header">
+                         <i class="fa fa-arrow-up"></i>
+                    </div>
+               </a>
+
+               <div id="hbreadcrumb" class="pull-right m-t-lg">
+                    <ol class="hbreadcrumb breadcrumb">
+                         <li>
+                              <span>App views</span>
+                         </li>
+                         <li class="active">
+                              <span>FAQ</span>
+                         </li>
+                    </ol>
+               </div>
+               <h2 class="font-light m-b-xs">
+                    FAQ
+               </h2>
+               <small>FAQ page - build faq/support page for your app</small>
+          </div>
+     </div>
+</div>
+
+<div class="content">
+
+
+     <div class="row">
+          <div class="col-lg-6">
+               <div class="hpanel panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel-body">
+                         <h4 class="m-t-none m-b-none">Сайт</h4>
+                         <small class="text-muted">All general questions about our app.</small>
+                    </div>
+                    <div class="panel-body">
+                         <a data-toggle="collapse" data-parent="#accordion" href="#q1" aria-expanded="true">
+                              <i class="fa fa-chevron-down pull-right text-muted"></i>
+                              Будет ли приложение для Android и iOS?
+                         </a>
+                         <div id="q1" class="panel-collapse collapse">
+                              <p style="text-align: justify; ">
+                                   Нет. Для создания подобных приложений нужны знания языков программирования, ориентированные именно для мобильных приложений (Java, Swift и т.д.). У нас в команде нет человека с такими знаниями, нанимать программиста - дорого (можете сами загуглить сколько стоит мобильная разработка), просить кого-то из пользователей - слишком рискованно (начиная от элементарного отсутствия опыта у потенциального разработчика и заканчивая его возможным уходом/забиванием, поскольку заниматься поддержкой приложения сами не сможем).
+                                   Знающие люди могут возразить, что сейчас есть возможность создавать так называемые гибридные приложения. Мы можем создать его, но оно будет лагать и тормозить. Поэтому, от создания гибридного приложения сразу отказались.
+                                   Даже если само приложение будет создано - не факт что его примут в Play Маркет и тем более AppStore (где модерация ручная). Не забывайте, что все подобные сайты не имеют лицензий на аниме. Даже если модерация будет пройдена, всегда есть риск, что приложение удалят из магазина.
+                                   Конечно, пользователи андроида всегда могут установить приложение вне маркета, но пользовали iOS в этом ограничены.
+                                   Да, мы знаем, что некоторые другие сайты по аниме сделали свои приложения. Но считаем эту затею слишком рискованной.
+                                   А теперь хорошая новость. Сейчас становятся популярными так называемые прогрессивные веб-приложения (Progressive Web Apps). Если коротко - они выглядят как приложения, запускаются по нажатии на иконку и создаются теми же инструментами, что и обычные сайты. Если вы никогда о них не слышали, на хабре есть хорошая статья под названием "Progressive Web Apps: WhoAmI". Преимущества этого подхода - неважно какая у вас операционная система, не нужен магазин приложений, приложение будет хорошо выглядеть и работать на смартфоне. Вот на такое приложение мы и будем ориентироваться в будущем, а не на классическое мобильное приложение.
+                         </p>
+                         </div>
+                    </div>
+                    <div class="panel-body">
+                         <a data-toggle="collapse" data-parent="#accordion" href="#q2" aria-expanded="true">
+                              <i class="fa fa-chevron-down pull-right text-muted"></i>
+                              Ваш плеер лагает!
+                         </a>
+                         <div id="q2" class="panel-collapse collapse">
+                              <p style="text-align: justify; ">
+                                   У нас нет своих плееров, все плееры, используемые на сайте - сторонние.
+                                   Если у вас проблемы с каким-то плеером - на странице с аниме под плеером есть инструкция по решению этих проблем, если инструкция не поможет - пишите в тех поддержку сайта, постараемся помочь.
+                              </p>
+                         </div>
+                    </div>
+                    <div class="panel-body">
+                         <a data-toggle="collapse" data-parent="#accordion" href="#q3" aria-expanded="true">
+                              <i class="fa fa-chevron-down pull-right text-muted"></i>
+                              Я не помню на какой серии остановился!
+                         </a>
+                         <div id="q3" class="panel-collapse collapse">
+                              <p style="text-align: justify; ">
+                                   Сайт запоминает на какой серии вы остановились в момент нажатия на номер серии. Этот номер помечается зеленым цветом.
+                              </p>
+                         </div>
+                    </div>
+                    <div class="panel-body">
+                         <a data-toggle="collapse" data-parent="#accordion" href="#q4" aria-expanded="true">
+                              <i class="fa fa-chevron-down pull-right text-muted"></i>
+                              Какие уведомления я буду получать после регистрации?
+                         </a>
+                         <div id="q4" class="panel-collapse collapse">
+                              <p style="text-align: justify; ">
+                                   1. О выходе новых серий онгоингов, если подписаны на один из видов переводов. На каждый вид перевода каждого онгоинга вы подписываетесь сами.
+                                   2. О выходе первой серии анонсов (имеется в виду, что у аниме статус "анонс"), если они в списке "Буду смотреть". Также, если анонс вы добавили в список "Смотрю" и к нему добавляется первая серия (в этот момент статус аниме меняется на "онгоинг").
+                                   3. О добавлении последней серии, если аниме было онгоингом и у вас оно находится в списке "Буду смотреть".
+                                   4. О добавлении аниме продолжений, OVA, спэшлов и старых сезонов (если на сайте их не было) для аниме из списка "Просмотрено". Например, если у вас в просмотрено есть первый сезон аниме "Владыка", вы получите уведомление, когда будет добавлен второй, третий сезоны и т.д.
+                                   5. Когда отвечают на ваш комментарий.
+                                   6. Когда вас хотят добавить в друзья или когда вашу заявку в друзья отклонили.
+                                   7. Когда выходит новый материал пользователя, на которого вы подписаны, например, если видеоблогер добавил новое видео.
+                                   8. Когда меняется статус вашей рецензии. Авторы рецензий также могут получать уведомления о добавлении новых комментариев к своим рецензиям.
+                                   9. Отдельно могут приходить уведомления от администрации, обычно при нарушениях правил сайта.
+                              </p>
+                         </div>
+                    </div>
+                    <div class="panel-body">
+                         <a data-toggle="collapse" data-parent="#accordion" href="#q5" aria-expanded="true">
+                              <i class="fa fa-chevron-down pull-right text-muted"></i>
+                              Можно ли посмотреть, кто поставил лайк или дизлайк моему комментарию?
+                         </a>
+                         <div id="q5" class="panel-collapse collapse">
+                              <p style="text-align: justify; ">
+                                   Нет
+                              </p>
+                         </div>
+                    </div>
+                    <div class="panel-body">
+                         <a data-toggle="collapse" data-parent="#accordion" href="#q6" aria-expanded="true">
+                              <i class="fa fa-chevron-down pull-right text-muted"></i>
+                              Почему я не могу редактировать свои комментарии?
+                         </a>
+                         <div id="q6" class="panel-collapse collapse">
+                              <p style="text-align: justify; ">
+                                   Свои комментарии можно редактировать пока им не ставили лайк/дизлайк
+                              </p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="col-lg-6">
+               <div class="hpanel panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                    <div class="panel-body">
+                         <h4 class="m-t-none m-b-none">Рецензии</h4>
+                         <small class="text-muted">All technical questions about our app.</small>
+                    </div>
+                    <div class="panel-body">
+                         <a data-toggle="collapse" data-parent="#accordion2" href="#q7" aria-expanded="true">
+                              <i class="fa fa-chevron-down pull-right text-muted"></i>
+                              Кто может добавлять рецензии?
+                         </a>
+                         <div id="q7" class="panel-collapse collapse">
+                              <p style="text-align: justify; ">
+                                   Все пользователи. Но рецензии от не рецензентов будут доступны для просмотра только после проверки.
+                              </p>
+                         </div>
+                    </div>
+                    <div class="panel-body">
+                         <a data-toggle="collapse" data-parent="#accordion2" href="#q8" aria-expanded="true">
+                              <i class="fa fa-chevron-down pull-right text-muted"></i>
+                              Сколько раз можно редактировать рецензию?
+                         </a>
+                         <div id="q8" class="panel-collapse collapse">
+                              <p style="text-align: justify; ">
+                                   Текст рецензии можно редактировать только 3 раза. Остальные части (свой рейтинг, настройки рецензии) - сколько угодно раз.
+                              </p>
+                         </div>
+                    </div>
+                    <div class="panel-body">
+                         <a data-toggle="collapse" data-parent="#accordion2" href="#q9" aria-expanded="true">
+                              <i class="fa fa-chevron-down pull-right text-muted"></i>
+                              Кто может проверять рецензии?
+                         </a>
+                         <div id="q9" class="panel-collapse collapse">
+                              <p style="text-align: justify; ">
+                                   Администрация сайта и рецензенты. Для изменения статуса рецензии нужен 1 голос администратора или несколько голосов рецензентов.
+                              </p>
+                         </div>
+                    </div>
+                    <div class="panel-body">
+                         <a data-toggle="collapse" data-parent="#accordion2" href="#q10" aria-expanded="true">
+                              <i class="fa fa-chevron-down pull-right text-muted"></i>
+                              Я буду получать уведомления о новых комментариях под моей рецензией?
+                         </a>
+                         <div id="q10" class="panel-collapse collapse">
+                              <p style="text-align: justify; ">
+                                   Да, если указали это в настройках своей рецензии. Также можно отказаться от этих уведомлений.
+
+                              </p>
+                         </div>
+                    </div>
+                    <div class="panel-body">
+                         <a data-toggle="collapse" data-parent="#accordion2" href="#q11" aria-expanded="true">
+                              <i class="fa fa-chevron-down pull-right text-muted"></i>
+                              Что делать, если мою рецензию отклонили?
+                         </a>
+                         <div id="q11" class="panel-collapse collapse">
+                              <p style="text-align: justify; ">
+                                   Зайдите в Профиль - Рецензии и нажмите на кнопку "Кто проверял" для этой рецензии. При отклонении рецензии и администратором и рецензентом обязательным является комментарий - причина отклонения. Если причина не указана или она некорректная, сообщите об этом в техническую поддержку сайта по адресу all.yummy.anime@gmail.com.
+                              </p>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </div>
+
+
+</div>

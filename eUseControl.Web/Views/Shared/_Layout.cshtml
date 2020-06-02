@@ -1,0 +1,98 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html>
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>eUse System | @ViewBag.Title</title>
+
+     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" type="text/css">
+     @Styles.Render("~/bundles/fontawesome/css")
+     @Styles.Render("~/bundles/metisMenu/css")
+     @Styles.Render("~/bundles/animate/css")
+     @Styles.Render("~/bundles/bootstrap/css")
+     @Styles.Render("~/bundles/peicon/css")
+     @Styles.Render("~/bundles/sweetalert/css")
+     @Styles.Render("~/bundles/helper/css")
+     @Styles.Render("~/bundles/style/css")
+     @Styles.Render("~/bundles/toastr/css")
+     @Styles.Render("~/bundles/static/css")
+     <link href="~/Content/summernote-bs3.css" rel="stylesheet" />
+     <link href="~/Content/summernote.css" rel="stylesheet" />
+     <!-- Add local styles, mostly for plugins css file -->
+     @if (IsSectionDefined("Styles"))
+     {@RenderSection("Styles", required: false)}
+
+</head>
+
+<body class="fixed-navbar sidebar-scroll">
+     <div>
+
+          <!-- Header -->
+          <div id="header">
+               @Html.Partial("_Header")
+          </div>
+
+          <!-- Navigation -->
+          <aside id="menu" style="background-color:azure;">
+               @Html.Partial("_Navigation")
+          </aside>
+
+          <!-- Main view -->
+          <section id="wrapper">
+               @RenderBody()
+               <!-- Footer-->
+               @Html.Partial("_Footer")
+          </section>
+
+          <!-- Section for main scripts render -->
+          @Scripts.Render("~/bundles/jquerymin/js")
+          @Scripts.Render("~/bundles/jqueryui/js")
+          @Scripts.Render("~/bundles/jqueryslim/js")
+          @Scripts.Render("~/bundles/bootstrap/js")
+          @Scripts.Render("~/bundles/metisMenu/js")
+          @Scripts.Render("~/bundles/icheck/js")
+          @Scripts.Render("~/bundles/index/js")
+          @Scripts.Render("~/bundles/homer/js")
+          <script src="~/Scripts/summernote.min.js"></script>
+          <!-- Handler for local scripts -->
+          @RenderSection("scripts", required: false)
+     </div>
+     <script type="text/javascript">
+          $(function () {
+               if (!Modernizr.inputtypes.date) {
+                    $(function () {
+                         $("input[type='date']")
+                              .datepicker({ dateFormat: 'dd/mm/yy' })
+                              .get(0).setAttribute("type", "text");
+                    })
+               }
+          });
+     </script>
+     <script>
+
+          $(function () {
+
+               // Initialize summernote plugin
+               $('.summernote').summernote();
+
+               $('.summernote1').summernote({
+                    toolbar: [
+                         ['headline', ['style']],
+                         ['style', ['bold', 'italic', 'underline', 'superscript', 'subscript', 'strikethrough', 'clear']],
+                         ['textsize', ['fontsize']],
+                         ['alignment', ['ul', 'ol', 'paragraph', 'lineheight']],
+                    ]
+               });
+
+               $('.summernote2').summernote({
+                    airMode: true,
+               });
+
+          });
+
+     </script>
+</body>
+</html>

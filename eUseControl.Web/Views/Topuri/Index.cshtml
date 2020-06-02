@@ -1,0 +1,81 @@
+﻿@model IEnumerable<eUseControl.Domain.Entities.User.Topuris>
+@{
+     Layout = "~/Views/Shared/_Layout.cshtml";
+     ViewBag.Title = "Home";
+     int i = 0;
+}
+
+
+<div class="normalheader ">
+     <div class="hpanel">
+          <div class="panel-body">
+               <a class="small-header-action" href="">
+                    <div class="clip-header">
+                         <i class="fa fa-arrow-up"></i>
+                    </div>
+               </a>
+
+               <div id="hbreadcrumb" class="pull-right m-t-lg">
+               </div>
+               <h2 class="font-light m-b-xs">
+                    Top100 Editor
+               </h2>
+          </div>
+     </div>
+</div>
+
+<div class="normalheader ">
+     <div style="text-align:center">
+          <button type="button" class="btn btn-info btn-lg">@Html.ActionLink("Create New", "Create")</button>
+     </div>
+</div>
+
+     <div class="content">
+
+          <div class="row">
+
+               @foreach (var item in Model)
+               {
+                    if (i == 4)
+                    {
+                         <div class="row"></div>
+                         i = 0;
+                    }
+                    i++;
+                    <div class="col-md-3">
+                         <div class="hpanel blog-box">
+                              <div class="panel-image">
+                                   <button class="btn btn-info " type="button"><i class="fa fa-paste"></i> @Html.ActionLink("Edit", "Edit", new { id = item.Id })</button>
+                                   <button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i> <span class="bold">@Html.ActionLink("Delete", "Delete", new { id = item.Id })</span></button>
+                                   <button type="button" class="btn w-xs btn-primary2">@Html.ActionLink("Details", "Details", new { id = item.Id })</button>
+                                   <div style="text-align:center">
+                                        <img class="img-responsive" src="@Url.Content(@item.Foto)" alt="">
+                                   </div>
+                                        <div class="title">
+                                             <a href="blog_details.html"> <h4>@Html.DisplayFor(modelItem => item.Data)</h4></a>
+                                             <small>Even slightly believable</small>
+                                        </div>
+                                   </div>
+                                   <div class="panel-body">
+                                        <p>
+                                             <span class="label label-success">@Html.DisplayFor(modelItem => item.Status)</span>
+                                        </p>
+                                        <p style="text-align: justify; ">
+                                             @Html.DisplayFor(modelItem => item.Descriere)
+                                        </p>
+                                   </div>
+                                   <div class="panel-footer">
+                                        <span class="pull-right">
+                                             <i class="fa fa-comments-o"> </i>@Html.DisplayFor(modelItem => item.Serii)
+                                        </span>
+                                        <i class="fa fa-eye"> </i> @Html.DisplayFor(modelItem => item.Nota)
+                                   </div>
+
+                              </div>
+                    </div>
+               }
+
+          </div>
+
+     </div>
+

@@ -1,0 +1,52 @@
+﻿@model eUseControl.Domain.Entities.User.Topuris
+
+@{
+     Layout = "~/Views/Shared/_Layout.cshtml";
+     ViewBag.Title = "Home";
+}
+<div class="content content-boxed">
+     <div class="row">
+          <div class="col-lg-12">
+               <div class="hpanel blog-article-box">
+                    <div class="panel-heading">
+                         <h4>@Html.DisplayFor(model => model.Data) </h4>
+                         <small>There are many variations of passages of Lorem Ipsum available</small>
+                    </div>
+                    <div class="panel-body">
+                         <div class="row">
+                              <style>
+                                   .column {
+                                        float: left;
+                                        width: 50%;
+                                   }
+                              </style>
+                              <div class="column">
+                                   <h4>Статус: @Html.DisplayFor(model => model.Status)</h4>
+                                   <h4>Оценка: @Html.DisplayFor(model => model.Nota)</h4>
+                                   <h4>Год: @Html.DisplayFor(model => model.Anul)</h4>
+                                   <h4>Серии: @Html.DisplayFor(model => model.Serii)</h4>
+                                   <div>
+                                        <h2> Описание: </h2>
+                                        <div style="text-align: justify;">
+                                             <h4> @Html.DisplayFor(model => model.Descriere) </h4>
+                                        </div>
+                                   </div>
+                                   <p><a href="http://yummyanime.com/channel/75">Посмотреть видео обзор аниме</a></p>
+                              </div>
+                              <div class="column">
+                                   <div class="pull-right">
+                                        <img class="img-responsive" src="@Url.Content(Model.Foto)" width="300" height="500" alt="">
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="panel-footer">
+                         <span class="pull-right">
+                              <i class="fa fa-comments-o"> </i> @Html.DisplayFor(model => model.Serii)
+                         </span>
+                         <i class="fa fa-eye"> </i> @Html.DisplayFor(model => model.Nota)
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
